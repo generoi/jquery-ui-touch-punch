@@ -8,20 +8,7 @@
  *  jquery.ui.widget.js
  *  jquery.ui.mouse.js
  */
-(function( factory ) {
-  if ( typeof define === "function" && define.amd ) {
-
-    // AMD. Register as an anonymous module.
-    define([
-      "jquery",
-      "draggable"
-    ], factory );
-  } else {
-
-    // Browser globals
-    factory( jQuery );
-  }
-}(function( $ ) {
+(function( $ ) {
 
   function isTouchDevice() {
     var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
@@ -206,4 +193,4 @@
     _mouseDestroy.call(self);
   };
 
-}));
+})(jQuery);
